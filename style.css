@@ -1,0 +1,836 @@
+
+/* Reset default browser styling */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Website background and typography */
+
+body {
+    background-color: #101827;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+/* Header section */
+
+header {
+    padding: 50px 60px;
+}
+
+header h1 {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+header p {
+    font-size: 20px;
+    color: #94a3b8;
+    margin-top: 15px;
+}
+
+/* Main two-column layout */
+
+.container {
+    display: flex;
+    align-items: center;
+    min-height: 65vh;
+    padding: 30px 60px;
+    gap: 40px;
+}
+
+/* Left navigation */
+
+.sidebar {
+    width: 30%;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar li {
+    margin-bottom: 25px;
+}
+
+/* Navigation buttons */
+
+.sidebar button {
+    background: transparent;
+    border: none;
+    color: #e2e8f0;
+    font-size: 24px;
+    text-align: left;
+    cursor: pointer;
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+/* Button hover effect */
+
+.sidebar button:hover {
+    background-color: #1e293b;
+    color: #38bdf8;
+    transform: translateX(10px);
+}
+
+/* Right content section */
+
+.content {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Profile photograph */
+
+.profile-photo {
+    width: 350px;
+    height: 350px;
+    max-width: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #38bdf8;
+    box-shadow: 0 0 30px rgba(56, 189, 248, 0.15);
+}
+
+/* Mobile responsive design */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 30px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    .container {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar button {
+        font-size: 20px;
+    }
+
+    .profile-photo {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+/* Home profile layout */
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+}
+
+/* Home welcome message */
+
+.welcome-message {
+    font-size: 26px;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 1.5;
+}
+
+/* Mobile welcome message */
+
+@media (max-width: 768px) {
+    .welcome-message {
+        font-size: 20px;
+    }
+}
+
+/* About Me section */
+
+.about-section {
+    max-width: 900px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* About Me subheadings */
+
+.about-section h3 {
+    font-size: 22px;
+    color: #38bdf8;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+/* Education card */
+
+.about-card {
+    background-color: #1e293b;
+    padding: 20px;
+    border-radius: 10px;
+    border-left: 4px solid #38bdf8;
+}
+
+/* Education title */
+
+.about-card h4 {
+    font-size: 20px;
+    color: #ffffff;
+    margin-bottom: 10px;
+}
+
+/* Technical skills container */
+
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+/* Individual skill tags */
+
+.skill {
+    background-color: #1e293b;
+    color: #38bdf8;
+    padding: 10px 16px;
+    border: 1px solid #334155;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+}
+
+/* Skill hover effect */
+
+.skill:hover {
+    background-color: #38bdf8;
+    color: #101827;
+    transform: translateY(-3px);
+}
+
+/* Keep navigation at the top */
+
+.container {
+    align-items: flex-start;
+}
+
+.content {
+    align-self: stretch;
+}
+
+/* Fade-in animation */
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+
+    .about-section {
+        padding: 15px;
+    }
+
+    .about-section h3 {
+        font-size: 20px;
+    }
+
+    .skill {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
+/* Experience section */
+
+.experience-section {
+    max-width: 900px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Experience cards */
+
+.experience-card {
+    background-color: #1e293b;
+    padding: 25px;
+    margin-bottom: 30px;
+    border-radius: 12px;
+    border-left: 4px solid #38bdf8;
+    transition: all 0.3s ease;
+}
+
+/* Experience card hover effect */
+
+.experience-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.12);
+}
+
+/* Company header */
+
+.experience-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #334155;
+}
+
+/* Company logos */
+
+.company-logo {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+/* Company name */
+
+.experience-header h3 {
+    font-size: 24px;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+/* Job title */
+
+.experience-header h4 {
+    font-size: 18px;
+    color: #38bdf8;
+    font-weight: 500;
+}
+
+/* Department name */
+
+.experience-header .department {
+    font-size: 14px;
+    color: #94a3b8;
+    margin-top: 5px;
+}
+
+/* Responsibilities */
+
+.responsibilities {
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+
+/* Individual responsibilities */
+
+.responsibilities li {
+    color: #e2e8f0;
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+/* Bullet point color */
+
+.responsibilities li::marker {
+    color: #38bdf8;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+
+    .experience-section {
+        padding: 15px;
+    }
+
+    .experience-card {
+        padding: 15px;
+    }
+
+    .company-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .experience-header {
+        gap: 12px;
+    }
+
+    .experience-header h3 {
+        font-size: 20px;
+    }
+
+    .experience-header h4 {
+        font-size: 16px;
+    }
+
+    .responsibilities li {
+        font-size: 14px;
+    }
+}
+
+/* Interests section */
+
+.interests-section {
+    max-width: 1000px;
+    animation: fadeIn 0.5s ease;
+}
+
+/* Introduction paragraph */
+
+.interests-intro {
+    margin-bottom: 30px;
+}
+
+/* Two-column grid */
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* Individual interest cards */
+
+.interest-card {
+    background-color: #1e293b;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #334155;
+    transition: all 0.3s ease;
+}
+
+/* Interest card hover effect */
+
+.interest-card:hover {
+    transform: translateY(-5px);
+    border-color: #38bdf8;
+    box-shadow: 0 8px 25px rgba(56, 189, 248, 0.15);
+}
+
+/* Interest icons */
+
+.interest-icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+/* Interest headings */
+
+.interest-card h3 {
+    font-size: 20px;
+    color: #38bdf8;
+    margin-bottom: 15px;
+}
+
+/* Interest descriptions */
+
+.interest-card p {
+    font-size: 16px;
+    color: #e2e8f0;
+    line-height: 1.7;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .interests-section {
+        padding: 15px;
+    }
+
+    .interest-card {
+        padding: 20px;
+    }
+
+    .interest-icon {
+        font-size: 32px;
+    }
+
+    .interest-card h3 {
+        font-size: 18px;
+    }
+
+    .interest-card p {
+        font-size: 14px;
+    }
+}
+
+/* ==================================
+   PHASE 9: WEBSITE ANIMATIONS
+   ================================== */
+
+/* Smooth scrolling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Header entrance animation */
+
+header {
+    animation: slideDown 0.8s ease both;
+}
+
+/* Sidebar entrance animation */
+
+.sidebar {
+    animation: slideRight 0.8s ease both;
+}
+
+/* Profile photograph animation */
+
+.profile-photo {
+    animation: zoomIn 0.8s ease both;
+    transition: transform 0.4s ease,
+                box-shadow 0.4s ease;
+}
+
+/* Profile photograph hover effect */
+
+.profile-photo:hover {
+    transform: scale(1.04);
+    box-shadow: 0 0 45px rgba(56, 189, 248, 0.3);
+}
+
+/* Welcome message animation */
+
+.welcome-message {
+    animation: fadeIn 0.8s ease 0.2s both;
+}
+
+/* Dynamic section animation */
+
+.content.section-transition {
+    animation: sectionFade 0.4s ease both;
+}
+
+/* Navigation button improvements */
+
+.sidebar button {
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+.sidebar button:active {
+    transform: scale(0.97);
+}
+
+.sidebar button:focus-visible {
+    outline: 2px solid #38bdf8;
+    outline-offset: 4px;
+}
+
+/* Header animation */
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Sidebar animation */
+
+@keyframes slideRight {
+    from {
+        opacity: 0;
+        transform: translateX(-25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Profile photograph animation */
+
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        scale: 0.9;
+    }
+
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+/* Section transition animation */
+
+@keyframes sectionFade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Custom scrollbar */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #101827;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #38bdf8;
+}
+
+/* ==================================
+   PHASE 9: RESPONSIVE WEBSITE DESIGN
+   ================================== */
+
+/* Prevent horizontal overflow */
+
+body {
+    overflow-wrap: break-word;
+}
+
+.content {
+    min-width: 0;
+}
+
+.profile {
+    width: 100%;
+}
+
+.profile-photo {
+    aspect-ratio: 1 / 1;
+    height: auto;
+}
+
+/* ==================================
+   TABLET DEVICES
+   ================================== */
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    header {
+        padding: 35px;
+    }
+
+    header h1 {
+        font-size: 30px;
+    }
+
+    .container {
+        padding: 25px 35px;
+        gap: 25px;
+    }
+
+    .sidebar {
+        width: 28%;
+    }
+
+    .sidebar button {
+        font-size: 18px;
+        padding: 12px;
+    }
+
+    .profile-photo {
+        width: 280px;
+    }
+
+    .welcome-message {
+        font-size: 22px;
+    }
+
+    .section-content {
+        padding: 20px;
+    }
+
+    .interests-grid {
+        gap: 15px;
+    }
+}
+
+/* ==================================
+   MOBILE DEVICES
+   ================================== */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    header h1 {
+        font-size: 26px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        gap: 25px;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    .sidebar ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .sidebar li {
+        margin-bottom: 0;
+    }
+
+    .sidebar button {
+        font-size: 15px;
+        padding: 10px 14px;
+        text-align: center;
+        min-height: 44px;
+    }
+
+    .sidebar button:hover {
+        transform: none;
+    }
+
+    .sidebar button.active {
+        border-left: none;
+        border-bottom: 3px solid #38bdf8;
+    }
+
+    .content {
+        width: 100%;
+        align-self: auto;
+    }
+
+    .profile-photo {
+        width: 230px;
+        height: auto;
+    }
+
+    .welcome-message {
+        font-size: 20px;
+    }
+
+    .section-content {
+        width: 100%;
+        padding: 15px 5px;
+    }
+
+    .section-content h2 {
+        font-size: 26px;
+    }
+
+    .section-content p {
+        font-size: 16px;
+    }
+
+    .interests-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-card {
+        padding: 15px;
+    }
+}
+
+/* ==================================
+   SMALL MOBILE DEVICES
+   ================================== */
+
+@media (max-width: 480px) {
+
+    header h1 {
+        font-size: 23px;
+    }
+
+    .sidebar button {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .profile-photo {
+        width: 190px;
+    }
+
+    .welcome-message {
+        font-size: 18px;
+    }
+
+    .company-logo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .experience-header h3 {
+        font-size: 18px;
+    }
+
+    .experience-header h4 {
+        font-size: 14px;
+    }
+}
+
+/* ==================================
+   ACCESSIBILITY
+   ================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+    }
+}
