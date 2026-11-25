@@ -959,3 +959,15 @@ body {
         transform: none;
     }
 }
+
+/* Display full email address */
+
+.contact-link span {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.contact-link[href^="mailto:"] {
+    font-size: 14px;
+    max-width: 100%;
+}
